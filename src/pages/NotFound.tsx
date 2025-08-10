@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,11 +13,16 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <Helmet>
+        <title>Page Not Found – Lovable</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="This page could not be found on Lovable." />
+      </Helmet>
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+        <p className="text-xl text-muted-foreground mb-4">Oops! Page not found</p>
+        <a href="/" className="story-link">
           Return to Home
         </a>
       </div>
