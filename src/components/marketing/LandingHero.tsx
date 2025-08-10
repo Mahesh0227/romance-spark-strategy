@@ -38,7 +38,7 @@ const LandingHero = () => {
   };
 
   return (
-    <section aria-labelledby="hero-heading" className="relative overflow-hidden">
+    <section aria-labelledby="hero-heading" className="relative overflow-hidden min-h-[70vh] md:min-h-[80vh] flex items-center">
       {/* Background image + gradient overlay */}
       <div className="absolute inset-0 -z-10">
         <div
